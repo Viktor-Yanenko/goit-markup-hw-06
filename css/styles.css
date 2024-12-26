@@ -112,6 +112,7 @@ img {
         line-height: 1.17;
         letter-spacing: 0.04em;
         color: #434455;
+        font-style: normal;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
@@ -126,7 +127,7 @@ img {
     .contacts {
         font-size: 16px;
         line-height: 1.5;
-        font-style: normal;
+        
         letter-spacing: 0.02em;        
         }
 }
@@ -150,7 +151,7 @@ img {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    margin-right: 76px;
+    margin-right: 120px;
 }
 
 .logo-studio {
@@ -209,8 +210,16 @@ img {
     width: 24px;
     height: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+}
+
+.close-menu-btn:focus,
+.close-menu-btn:hover {
+    background-color: #404bbf;
+    border: none;
+    fill: #fff;
 }
 
 .mobile-menu-nav {
@@ -383,8 +392,6 @@ img {
     }
 }
 
-.title {}
-
 .header-one {
     font-weight: 700;
     font-size: 36px;
@@ -429,6 +436,13 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-btn:hover,
+.order-btn:focus {
+    background-color: #404bbf;
 }
 
 /* Advantages */
@@ -460,7 +474,6 @@ img {
 .icon-box {
     display: none;
 }
-
 
 @media screen and (min-width: 768px){
     .adv-list{
@@ -811,6 +824,12 @@ img {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subs-email:focus-within {
+    border: 1px solid #404bbf;
+    outline: none;
 }
 
 .subs-email::placeholder {
@@ -857,8 +876,8 @@ img {
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 72px;
-        max-width: 528px;
         align-items: baseline;
+        padding: 0 108px;
     }
 
     .foot-logo {
@@ -887,8 +906,9 @@ img {
         padding-bottom: 100px;
     }
 
-    .foot {        
-        max-width: 1158px;        
+    .foot {
+        max-width: 1125px;
+        padding: 0;
         gap: 0;
         }
 
@@ -899,15 +919,13 @@ img {
     .subscribe-cont {
         margin-left: auto;
     }
+
+    .subs-email {
+        border: 1px solid #fff;
+    }
 }
 
-
-
-
-
-
-
-
+/* Modal */
 
 .backdrop {
     position: fixed;
